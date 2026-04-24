@@ -5,11 +5,15 @@
   "main": "dist/main.js",
   "scripts": {
     "build": "tsc",
-    "start": "bun run build && electron ."
+    "start": "bun run build && electron .",
+    "predev": "tsc",
+    "dev": "concurrently -k -n tsc,electron -c blue,green \"tsc -w --preserveWatchOutput\" \"electronmon .\""
   },
   "devDependencies": {
     "@types/node": "^25.6.0",
+    "concurrently": "^9.2.1",
     "electron": "^33.0.0",
+    "electronmon": "^2.0.4",
     "typescript": "^6.0.3"
   }
 }
