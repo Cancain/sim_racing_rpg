@@ -7,7 +7,8 @@
     "build": "tsc",
     "start": "bun run build && electron .",
     "predev": "tsc",
-    "dev": "concurrently -k -n tsc,electron -c blue,green \"tsc -w --preserveWatchOutput\" \"electron .\""
+    "dev": "concurrently -k -n tsc,electron -c blue,green \"tsc -w --preserveWatchOutput\" \"electron .\"",
+    "spike:iracing": "bun run scripts/iracing-spike.ts"
   },
   "dependencies": {
     "chokidar": "^4"
