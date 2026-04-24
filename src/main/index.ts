@@ -9,13 +9,13 @@ function createWindow(): void {
     title: 'Sim Racing Career',
   });
 
-  win.loadFile(path.join(__dirname, '..', 'index.html'));
+  win.loadFile(path.join(__dirname, '..', '..', 'index.html'));
 }
 
 function setupDevWatchers(): void {
   if (app.isPackaged) return;
 
-  const htmlPath = path.join(__dirname, '..', 'index.html');
+  const htmlPath = path.join(__dirname, '..', '..', 'index.html');
   chokidar.watch(htmlPath).on('change', () => {
     for (const win of BrowserWindow.getAllWindows()) win.webContents.reload();
   });
