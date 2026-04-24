@@ -15,5 +15,14 @@
     "electron": "^33.0.0",
     "electronmon": "^2.0.4",
     "typescript": "^6.0.3"
+  },
+  "electronmon": {
+    "patterns": [
+      "!node_modules/**",
+      "!.git/**",
+      "!**/*.map",
+      "dist/**/*.js",
+      "index.html"
+    ]
   }
 }
