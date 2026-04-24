@@ -2,11 +2,14 @@
   "name": "sim-career",
   "version": "0.0.1",
   "description": "Desktop-app som simulerar en racingkarriär ovanpå iRacings offline AI",
-  "main": "main.js",
+  "main": "dist/main.js",
   "scripts": {
-    "start": "electron ."
+    "build": "tsc",
+    "start": "bun run build && electron ."
   },
   "devDependencies": {
-    "electron": "^33.0.0"
+    "@types/node": "^25.6.0",
+    "electron": "^33.0.0",
+    "typescript": "^6.0.3"
   }
 }

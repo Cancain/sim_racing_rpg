@@ -1,14 +1,14 @@
-const { app, BrowserWindow } = require('electron');
-const path = require('node:path');
+import { app, BrowserWindow } from 'electron';
+import path from 'node:path';
 
-function createWindow() {
+function createWindow(): void {
   const win = new BrowserWindow({
     width: 1280,
     height: 800,
     title: 'Sim Racing Career',
   });
 
-  win.loadFile(path.join(__dirname, 'index.html'));
+  win.loadFile(path.join(__dirname, '..', 'index.html'));
 }
 
 app.whenReady().then(() => {
