@@ -1,0 +1,23 @@
+node_modules/
+dist/
+build/
+out/
+
+# Databases (användarens data, inte i repo)
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Env
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
